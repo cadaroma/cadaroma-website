@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cadaroma Candles - Order</title>
+<style>
+body{font-family:Arial,sans-serif;margin:0;background:#f6f7fb;color:#111;}
+nav{background:#222;color:#FFD700;display:flex;justify-content:center;padding:15px 0;}
+nav a{color:#FFD700;margin:0 15px;text-decoration:none;font-weight:bold;}
+.container{max-width:900px;margin:20px auto;padding:20px;background:#fff;border-radius:10px;}
+h1{color:#ff6f61;margin-bottom:20px;}
+label{display:block;margin-top:10px;margin-bottom:4px;font-weight:bold;}
+select,input{width:100%;padding:8px;border:1px solid #ccc;border-radius:6px;}
+button{margin-top:12px;padding:10px 16px;background:#ff6f61;color:#fff;border:none;border-radius:6px;cursor:pointer;}
+table{width:100%;border-collapse:collapse;margin-top:20px;}
+th,td{border:1px solid #ddd;padding:8px;text-align:left;}
+th{background:#f0f0f0;}
+.summary p{margin:4px 0;font-weight:bold;}
+.remove-btn{background:#d9534f;padding:4px 8px;margin-left:4px;border-radius:4px;cursor:pointer;color:#fff;border:none;}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html">Home</a>
+  <a href="products.html">Products</a>
+  <a href="order.html">Order</a>
+  <a href="contact.html">Contact Us</a>
+</nav>
+
+<div class="container">
+<h1>Order Book</h1>
+<form id="orderForm">
+  <label>Customer Name</label>
+  <input type="text" id="customer" placeholder="Enter customer name" required>
+  <label>Select Product</label>
+  <select id="product" required>
+    <option value="">-- Select Candle --</option>
+    <option value="CLAY SOYA Candle">CLAY SOYA Candle</option>
+    <option value="TLIGHT GEL Candle">TLIGHT GEL Candle</option>
+    <option value="TLIGHT SOYA Candle">TLIGHT SOYA Candle</option>
+  </select>
+  <label>Pieces</label>
+  <select id="pieces" required><option value="">-- Select Pieces --</option></select>
+  <label>Price (Rs)</label>
+  <select id="price" disabled><option value="">-- Price --</option></select>
+  <p class="summary">Total Amount: Rs <span id="totalAmount">0</span></p>
+  <button type="button" id="addProduct">Add Product</button>
+  <button type="button" id="sendWhatsApp">Send via WhatsApp</button>
+</form>
+
+<table id="ordersTable">
+<thead><tr><th>Customer</th><th>Product</th><th>Pieces</th><th>Price</th><th>Action</th></tr></thead>
+<tbody></tbody>
+</table>
+</div>
+
+<script src="js/order.js"></script>
+</body>
+</html>
