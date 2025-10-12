@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Order - Cadaroma Candles</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header>
+  <div class="brand"><img src="logo.png" alt="Cadaroma Logo"><h1>CADAROMA</h1></div>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="products_candle.html">Products</a>
+    <a href="order.html">Order</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
+
+<main class="container">
+<h2 style="color:#4b396f;margin-bottom:16px;">Order Book</h2>
+
+<form id="orderForm">
+  <label>Customer Name</label>
+  <input type="text" id="customer" placeholder="Enter customer name" required>
+
+  <label>Select Product</label>
+  <select id="product" required>
+    <option value="">-- Select Candle --</option>
+  </select>
+
+  <label>Pieces</label>
+  <select id="pieces" required><option value="">-- Select Pieces --</option></select>
+
+  <label>Price (Rs)</label>
+  <select id="price" disabled><option value="">-- Price --</option></select>
+
+  <label>Coupon Code</label>
+  <input type="text" id="coupon" placeholder="Enter coupon (optional)">
+
+  <p>Total Amount: Rs <span id="totalAmount">0</span></p>
+  <p>Discount %: <span id="discountPercent">0</span>%</p>
+  <p>Discount Amount: Rs <span id="discountAmount">0</span></p>
+  <p>Total After Discount: Rs <span id="totalAfterDiscount">0</span></p>
+
+  <div style="display:flex;gap:10px;margin-top:12px; flex-wrap:wrap;">
+    <button type="button" id="addProduct" class="btn">Add Product</button>
+    <button type="button" id="sendWhatsApp" class="btn">Send via WhatsApp</button>
+  </div>
+</form>
+
+<table id="ordersTable">
+  <thead>
+    <tr><th>Customer</th><th>Product</th><th>Pieces</th><th>Price</th><th>Action</th></tr>
+  </thead>
+  <tbody></tbody>
+</table>
+<script src="js/order.js"></script>
+</main>
+</body>
+</html>
