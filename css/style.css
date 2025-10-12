@@ -201,4 +201,38 @@ input, select, textarea{ width:100%; padding:10px; margin-top:6px; border-radius
 .logo:hover {
   filter: drop-shadow(0 0 25px #ffdd55) drop-shadow(0 0 60px #ffb300);
 }
+.logo {
+  filter: drop-shadow(0 0 10px #ffd700)
+          drop-shadow(0 0 20px #ffd700)
+          drop-shadow(0 0 30px #ffd700)
+          drop-shadow(0 0 40px #ffd700)
+          drop-shadow(0 0 50px #ffd700)
+          drop-shadow(0 0 60px #ffd700);
+  transition: all 0.3s ease;
+}
+
+/* Optional: pulse animation for extra effect */
+@keyframes glowPulse {
+  0%, 100% {
+    filter: drop-shadow(0 0 10px #ffd700)
+            drop-shadow(0 0 20px #ffd700)
+            drop-shadow(0 0 30px #ffd700)
+            drop-shadow(0 0 40px #ffd700)
+            drop-shadow(0 0 50px #ffd700)
+            drop-shadow(0 0 60px #ffd700);
+  }
+  50% {
+    filter: drop-shadow(0 0 20px #ffd700)
+            drop-shadow(0 0 40px #ffd700)
+            drop-shadow(0 0 60px #ffd700)
+            drop-shadow(0 0 80px #ffd700)
+            drop-shadow(0 0 100px #ffd700)
+            drop-shadow(0 0 120px #ffd700);
+  }
+}
+
+.logo {
+  animation: glowPulse 2s infinite alternate;
+}
+
 
