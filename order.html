@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cadaroma Candles — Order Book</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<nav class="navbar">
+  <a href="catalogue.html">Home</a>
+  <a href="order.html">Order Book</a>
+</nav>
+<div class="container">
+<h1>Cadaroma Candles — Order Book</h1>
+<form id="orderForm">
+  <label>Customer Name</label>
+  <input type="text" id="customer" placeholder="Enter customer name" required />
+  <label>Select Product</label>
+  <select id="product" required>
+    <option value="">-- Select Candle --</option>
+    <option value="CLAY SOYA Candle">CLAY SOYA Candle</option>
+    <option value="TLIGHT GEL Candle">TLIGHT GEL Candle</option>
+    <option value="TLIGHT SOYA Candle">TLIGHT SOYA Candle</option>
+    <option value="LADDU Candle">LADDU Candle</option>
+    <option value="MODAK Candle">MODAK Candle</option>
+    <option value="SMALL DOLL Candle">SMALL DOLL Candle</option>
+    <option value="DAISY FLOWER Candle">DAISY FLOWER Candle</option>
+    <option value="BUBBLE Candle">BUBBLE Candle</option>
+    <option value="3D FLOWER BALL Ball Candle">3D FLOWER BALL Ball Candle</option>
+    <option value="PEONY FLOWER Candle">PEONY FLOWER Candle</option>
+    <option value="BOUQUET Candle">BOUQUET Candle</option>
+    <option value="SMALL GLASS Candle">SMALL GLASS Candle</option>
+    <option value="TULIP Candle">TULIP Candle</option>
+  </select>
+  <label>Pieces</label>
+  <select id="pieces" required><option value="">-- Select Pieces --</option></select>
+  <label>Price (Rs)</label>
+  <select id="price" disabled><option value="">-- Price --</option></select>
+  <label>Coupon Code</label>
+  <input type="text" id="coupon" placeholder="Enter coupon code" />
+  <p class="summary">
+    Total Amount: Rs <span id="totalAmount">0</span><br>
+    Discount %: <span id="discountPercent">0</span>%<br>
+    Discount Amount: Rs <span id="discountAmount">0</span><br>
+    Total After Discount: Rs <span id="totalAfterDiscount">0</span>
+  </p>
+  <button type="button" id="addProduct">Add Product to Order</button>
+  <button type="button" id="sendWhatsApp">Send Order via WhatsApp</button>
+</form>
+<table id="ordersTable">
+<thead>
+<tr><th>Customer</th><th>Product</th><th>Pieces</th><th>Price (Rs)</th><th>Action</th></tr>
+</thead>
+<tbody></tbody>
+</table>
+<script src="js/order.js"></script>
+</div>
+</body>
+</html>
